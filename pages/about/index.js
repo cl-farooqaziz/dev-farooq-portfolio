@@ -95,6 +95,7 @@ const aboutData = [
 
 // Components
 import Circles from '../../components/Circles'
+import Bulb from '../../components/Bulb'
 
 // Framer Motion
 import { motion } from "framer-motion";
@@ -226,6 +227,7 @@ const About = () => {
             </div>
           </motion.div>
         </div>
+        <Bulb />
       </div>
     </>
   )

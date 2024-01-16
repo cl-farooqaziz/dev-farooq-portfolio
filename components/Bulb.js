@@ -11,7 +11,7 @@ const Bulb = () => {
           width={260}
           height={200}
           alt="Bulb"
-          className='w-full h-full'
+          className='w-full h-full hidden lg:block'
         />
       </div>
     </>
