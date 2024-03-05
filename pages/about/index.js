@@ -108,7 +108,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   return (
     <>
-      <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
+      <div className='h-full bg-primary/30 py-24 md:py-32 text-center xl:text-left'>
         <Circles />
         {/* About me */}
         <motion.div
@@ -119,7 +119,7 @@ const About = () => {
           className='hidden xl:flex absolute bottom-0 -left-[370px]'
         >
         </motion.div>
-        <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 pt-24'>
+        <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 lg:pt-24'>
           {/* Text */}
           <div className='flex-1 flex flex-col justify-center'>
             <motion.h2
@@ -136,7 +136,7 @@ const About = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='max-w-xl xl:max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
+              className='max-w-xl xl:max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-0'
             >
               Well-versed in numerous programming languages including HTML, CSS, JavaScript as well as proficiency in responsive design. My skills include expertise working with a variety of frameworks and tools, including Bootstrap, Tailwind, React Js, Next Js.
             </motion.p>
@@ -146,7 +146,7 @@ const About = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'
+              className='flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'
             >
               <div className='flex flex-1 xl:gap-x-6'>
                 {/* Experience */}
@@ -192,7 +192,7 @@ const About = () => {
                 return (
                   <div
                     key={itemIndex}
-                    className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                    className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'} cursor-pointer capitalize text-[14px] xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                     onClick={() => setIndex(itemIndex)}
                   >
                     {item.title}
@@ -200,19 +200,19 @@ const About = () => {
                 )
               })}
             </div>
-            <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start mt-4 xl:mt-0'>
+            <div className='w-full md:w-[52%] mx-auto lg:w-full py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-start mt-2 xl:mt-0'>
               {aboutData[index].info.map((item, itemIndex) => {
                 return (
                   <div
                     key={itemIndex}
-                    className='flex-1 flex flex-row xl:flex-col max-w-max gap-x-2 items-center xl:items-start text-white/60'
+                    className='flex-1 flex flex-col max-w-max gap-y-0 md:gap-y-1 lg:gap-y-0 gap-x-2 items-start text-white/60'
                   >
                     {/* Title */}
-                    <div className='font-bold text-[16px] xl:text-[20px] mb-2 md:mb-0'>{item.title}</div>
-                    <div>{item.Company}</div>
-                    <div>{item.stage}</div>
+                    <div className='font-bold text-[15px] xl:text-[20px] mb-0'>{item.title}</div>
+                    <div className='text-[14px] xl:text-[16px] mb-0'>{item.Company}</div>
+                    <div className='text-[14px] xl:text-[16px] mb-0'>{item.stage}</div>
                     {/* Icons */}
-                    <div className='flex gap-x-8 mt-0 xl:mt-5'>
+                    <div className='flex flex-wrap gap-y-5 md:gap-y-0 gap-x-16 md:gap-x-8 mt-3 xl:mt-5'>
                       {item.icons?.map((icon, iconIndex) => {
                         return (
                           <div key={iconIndex}>

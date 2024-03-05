@@ -1,21 +1,31 @@
+import Image from "next/image";
+import { useState } from "react";
 // Swiper 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Swiper Required Modules
 import { Pagination } from "swiper";
-
 // Swiper Style
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
 // Icons
-import { BsArrowRight, BsCodeSlash, BsCodeSquare, BsLaptop, BsStar, BsWindowDesktop } from "react-icons/bs";
-
+import { BsArrowRight, BsCodeSlash, BsLaptop, BsStar } from "react-icons/bs";
 // Images
-import Image from "next/image";
-import { useState } from "react";
-
+import thumb1 from '../public/thumb1.PNG'
+import thumb2 from '../public/thumb2.PNG'
+import thumb3 from '../public/thumb3.PNG'
+import thumb4 from '../public/thumb4.PNG'
+import thumb5 from '../public/thumb5.PNG'
+import thumb6 from '../public/thumb6.PNG'
+import thumb7 from '../public/thumb7.PNG'
+import thumb8 from '../public/thumb8.PNG'
+import thumb9 from '../public/thumb9.PNG'
+import thumb10 from '../public/thumb10.PNG'
+import thumb11 from '../public/thumb11.PNG'
+import thumb12 from '../public/thumb12.PNG'
+import thumb13 from '../public/thumb13.PNG'
+import thumb14 from '../public/thumb14.PNG'
+import thumb15 from '../public/thumb15.PNG'
 
 // Data
 const workData = {
@@ -24,22 +34,22 @@ const workData = {
       images: [
         {
           title: 'title',
-          path: '/thumb1.png',
+          path: thumb1,
           url: 'https://www.bitswits.co/'
         },
         {
           title: 'title',
-          path: '/thumb2.png',
+          path: thumb2,
           url: 'https://www.bookwritingexperts.com/'
         },
         {
           title: 'title',
-          path: '/thumb3.png',
+          path: thumb3,
           url: 'https://amazonsquare.vercel.app/'
         },
         {
           title: 'title',
-          path: '/thumb4.png',
+          path: thumb4,
           url: 'https://bestsellingpublisher.vercel.app/'
         },
       ],
@@ -48,22 +58,22 @@ const workData = {
       images: [
         {
           title: 'title',
-          path: '/thumb5.png',
+          path: thumb5,
           url: 'https://fsf-mart-pk.netlify.app/'
         },
         {
           title: 'title',
-          path: '/thumb6.png',
+          path: thumb6,
           url: 'https://crystallite-digital.vercel.app/'
         },
         {
           title: 'title',
-          path: '/thumb7.png',
+          path: thumb7,
           url: 'https://my-gym-pk.netlify.app/'
         },
         {
           title: 'title',
-          path: '/thumb8.png',
+          path: thumb8,
           url: 'https://seoresultspro.com/'
         },
       ],
@@ -72,22 +82,22 @@ const workData = {
       images: [
         {
           title: 'title',
-          path: '/thumb9.png',
+          path: thumb9,
           url: 'https://barbaracamp.com/'
         },
         {
           title: 'title',
-          path: '/thumb10.png',
+          path: thumb10,
           url: 'https://www.realestateagents.com/'
         },
         {
           title: 'title',
-          path: '/thumb11.png',
+          path: thumb11,
           url: 'https://edesignmind.com/'
         },
         {
           title: 'title',
-          path: '/thumb12.png',
+          path: thumb12,
           url: 'https://jobestow.com/'
         },
       ],
@@ -96,46 +106,45 @@ const workData = {
       images: [
         {
           title: 'title',
-          path: '/thumb13.png',
+          path: thumb13,
           url: 'https://prescription-pk.netlify.app/'
         },
         {
           title: 'title',
-          path: '/thumb14.png',
+          path: thumb14,
           url: 'https://www.dowco.com/'
         },
         {
           title: 'title',
-          path: '/thumb15.png',
+          path: thumb15,
           url: 'https://travel-pk.netlify.app/'
         }
       ],
     },
   ],
 };
-
 const workData1 = {
   slides: [
     {
       images: [
         {
           title: 'title',
-          path: '/thumb6.png',
+          path: thumb6,
           url: 'https://crystallite-digital.vercel.app/'
         },
         {
           title: 'title',
-          path: '/thumb7.png',
+          path: thumb7,
           url: 'https://my-gym-pk.netlify.app/'
         },
         {
           title: 'title',
-          path: '/thumb8.png',
+          path: thumb8,
           url: 'https://seoresultspro.com/'
         },
         {
           title: 'title',
-          path: '/thumb10.png',
+          path: thumb10,
           url: 'https://www.realestateagents.com/'
         },
       ],
@@ -144,22 +153,22 @@ const workData1 = {
       images: [
         {
           title: 'title',
-          path: '/thumb1.png',
+          path: thumb1,
           url: 'https://www.bitswits.co/'
         },
         {
           title: 'title',
-          path: '/thumb2.png',
+          path: thumb2,
           url: 'https://www.bookwritingexperts.com/'
         },
         {
           title: 'title',
-          path: '/thumb3.png',
+          path: thumb3,
           url: 'https://amazonsquare.vercel.app/'
         },
         {
           title: 'title',
-          path: '/thumb4.png',
+          path: thumb4,
           url: 'https://bestsellingpublisher.vercel.app/'
         },
       ],
@@ -168,53 +177,51 @@ const workData1 = {
       images: [
         {
           title: 'title',
-          path: '/thumb11.png',
+          path: thumb11,
           url: 'https://edesignmind.com/'
         },
         {
           title: 'title',
-          path: '/thumb12.png',
+          path: thumb12,
           url: 'https://jobestow.com/'
         },
         {
           title: 'title',
-          path: '/thumb14.png',
+          path: thumb14,
           url: 'https://www.dowco.com/'
         },
         {
           title: 'title',
-          path: '/thumb15.png',
+          path: thumb15,
           url: 'https://travel-pk.netlify.app/'
         }
       ],
     }
   ],
 };
-
 const workData2 = {
   slides: [
     {
       images: [
         {
           title: 'title',
-          path: '/thumb5.png',
+          path: thumb5,
           url: 'https://fsf-mart-pk.netlify.app/'
         },
         {
           title: 'title',
-          path: '/thumb9.png',
+          path: thumb9,
           url: 'https://barbaracamp.com/'
         },
         {
           title: 'title',
-          path: '/thumb13.png',
+          path: thumb13,
           url: 'https://prescription-pk.netlify.app/'
         }
       ],
     }
   ],
 };
-
 
 const WorkSlider = () => {
   const [activeTab, setActiveTab] = useState("All");
@@ -227,7 +234,7 @@ const WorkSlider = () => {
 
   return (
     <>
-      <div className="tabs flex gap-x-8 mb-8">
+      <div className="tabs flex justify-center gap-x-8 mb-8">
         <button
           className={`tab ${activeTab === "All" ? "active text-accent border-accent" : ""} btn border border-white/50 px-5 h-[40px] transition-all duration-300 flex items-center justify-center gap-x-2 overflow-hidden hover:border-accent hover:text-accent group`}
           onClick={() => handleTabClick("All")}
@@ -252,7 +259,7 @@ const WorkSlider = () => {
         </button>
       </div>
 
-      <div className="swiper-container">
+      <div className="swiper-container workslider">
         <Swiper
           spaceBetween={10}
           pagination={{ clickable: true }}
@@ -264,11 +271,11 @@ const WorkSlider = () => {
               {workData.slides.map((slide, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-8 lg:gap-4 cursor-pointer">
                       {
                         slide.images.map((image, index) => {
                           return (
-                            <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
+                            <div className="w-[85%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
                               <a href={image.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative overflow-hidden group"
                                 key={index}
                               >
@@ -310,11 +317,11 @@ const WorkSlider = () => {
               {workData1.slides.map((slide, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-8 lg:gap-4 cursor-pointer">
                       {
                         slide.images.map((image, index) => {
                           return (
-                            <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
+                            <div className="w-[85%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
                               <a href={image.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative overflow-hidden group"
                                 key={index}
                               >
@@ -356,11 +363,11 @@ const WorkSlider = () => {
               {workData2.slides.map((slide, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-8 lg:gap-4 cursor-pointer">
                       {
                         slide.images.map((image, index) => {
                           return (
-                            <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
+                            <div className="w-[85%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
                               <a href={image.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative overflow-hidden group"
                                 key={index}
                               >

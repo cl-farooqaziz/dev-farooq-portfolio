@@ -16,7 +16,7 @@ const Services = () => {
         <div className='container mx-auto'>
           <div className='flex flex-col xl:flex-row gap-x-8'>
             {/* Text */}
-            <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 mt-20 xl:mt-0'>
+            <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0 mt-5 md:mt-20 xl:mt-0'>
               <motion.h2
                 variants={fadeIn('up', 0.2)}
                 initial='hidden'
@@ -32,7 +32,7 @@ const Services = () => {
                 initial='hidden'
                 animate='show'
                 exit='hidden'
-                className='mb-4 max-w[400px] mx-auto lg:mx-0'
+                className='mb-0 md:mb-4 max-w[400px] mx-auto lg:mx-0'
               >
                 As a Front-End Developer with expertise in HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, React.js, and Next.js, I can create custom responsive and user-friendly websites.
               </motion.p>
