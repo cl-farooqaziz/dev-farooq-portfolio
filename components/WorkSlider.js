@@ -25,7 +25,7 @@ import thumb11 from '../public/thumb11.PNG'
 import thumb12 from '../public/thumb12.PNG'
 import thumb13 from '../public/thumb13.png'
 import thumb14 from '../public/thumb14.PNG'
-import thumb15 from '../public/thumb15.PNG'
+import thumb15 from '../public/thumb15.png'
 
 // Data
 const workData = {
