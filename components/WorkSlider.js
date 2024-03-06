@@ -11,21 +11,21 @@ import "swiper/css/pagination";
 // Icons
 import { BsArrowRight, BsCodeSlash, BsLaptop, BsStar } from "react-icons/bs";
 // Images
-import thumb1 from '../public/thumb1.png'
-import thumb2 from '../public/thumb2.png'
-import thumb3 from '../public/thumb3.png'
-import thumb4 from '../public/thumb4.png'
-import thumb5 from '../public/thumb5.png'
-import thumb6 from '../public/thumb6.png'
-import thumb7 from '../public/thumb7.png'
-import thumb8 from '../public/thumb8.png'
-import thumb9 from '../public/thumb9.png'
-import thumb10 from '../public/thumb10.png'
-import thumb11 from '../public/thumb11.png'
-import thumb12 from '../public/thumb12.png'
-import thumb13 from '../public/thumb13.png'
-import thumb14 from '../public/thumb14.png'
-import thumb15 from '../public/thumb15.png'
+import thumb1 from '../public/thumb1.PNG'
+import thumb2 from '../public/thumb2.PNG'
+import thumb3 from '../public/thumb3.PNG'
+import thumb4 from '../public/thumb4.PNG'
+import thumb5 from '../public/thumb5.PNG'
+import thumb6 from '../public/thumb6.PNG'
+import thumb7 from '../public/thumb7.PNG'
+import thumb8 from '../public/thumb8.PNG'
+import thumb9 from '../public/thumb9.PNG'
+import thumb10 from '../public/thumb10.PNG'
+import thumb11 from '../public/thumb11.PNG'
+import thumb12 from '../public/thumb12.PNG'
+import thumb13 from '../public/thumb13.PNG'
+import thumb14 from '../public/thumb14.PNG'
+import thumb15 from '../public/thumb15.PNG'
 
 // Data
 const workData = {
