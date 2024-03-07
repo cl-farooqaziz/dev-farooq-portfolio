@@ -39,14 +39,14 @@
     @apply h-[52px];
   }
   .input {
-    @apply w-full h-[52px] rounded-lg pl-6 capitalize;
+    @apply w-full h-[52px] rounded-lg pl-6;
   }
   .input,
   .textarea {
     @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
   }
   .textarea {
-    @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
+    @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
 }
 
@@ -54,10 +54,39 @@
 
 @media screen and (max-width: 991px) {
   .workslider .swiper-pagination-bullets {
-    bottom: 65px !important;
+    bottom: 50px !important;
+  }
+
+  .client .swiper-button-prev,
+  .client .swiper-button-next {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .workslider .swiper-pagination-bullets {
+    bottom: 40px !important;
   }
 
   .servcSlider .swiper-pagination-bullets {
-    bottom: -15px !important;
+    bottom: -30px !important;
+  }
+
+  .swiper.servcSlider,
+  .swiper.servcSlider .swiper-container {
+    overflow: visible;
+  }
+
+  .client .swiper-pagination-bullets {
+    bottom: -40px !important;
+  }
+
+  .swiper.client,
+  .swiper.client .swiper-container {
+    overflow: visible;
+  }
+
+  .contact textarea {
+    height: 100px;
   }
 }

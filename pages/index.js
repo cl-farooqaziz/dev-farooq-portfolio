@@ -13,10 +13,10 @@ import { fadeIn } from '../variants';
 const Home = () => {
   return (
     <>
-      <div className='bg-primary/60 h-full'>
+      <div className='bg-primary/30 h-full'>
         {/* Text */}
         <div className='w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
-          <div className='text-center flex flex-col justify-center pt-10 md:pt-20 xl:pt-40 xl:text-left h-full container mx-auto'>
+          <div className='text-center flex flex-col justify-start pt-24 md:pt-40 xl:text-left h-full container mx-auto'>
             {/* Title */}
             <motion.h1
               variants={fadeIn('down', 0.2)}
@@ -26,7 +26,7 @@ const Home = () => {
               className='h1 text-accent mb-3 md:mb-5'
             >
               Farooq Aziz <br /> {''}
-              <span className='text-[24px] md:text-[60px] text-white'>
+              <span className='text-[24px] md:text-[50px] lg:text-[60px] text-white'>
                 <TypeAnimation sequence={[
                   'Front-End Developer',
                   2000,
@@ -70,7 +70,7 @@ const Home = () => {
           {/* Particles */}
           <ParticlesContainer />
           {/* Avtar Img */}
-          <motion.div
+          {/* <motion.div
             variants={fadeIn('up', 0.5)}
             initial='hidden'
             animate='show'
@@ -79,7 +79,7 @@ const Home = () => {
             className='w-full h-full max-w-[400px] max-h-[475px] absolute -bottom-32 lg:bottom-0 lg:right-[14%]'
           >
             <Avatar />
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </>

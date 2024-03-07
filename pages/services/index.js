@@ -11,7 +11,7 @@ import { fadeIn } from '../../variants'
 const Services = () => {
   return (
     <>
-      <div className='h-full bg-primary/30 py-36 flex items-center'>
+      <div className='h-full bg-primary/60 pt-20 md:pt-0 lg:pt-28 flex items-start md:items-center overflow-x-hidden'>
         <Circles />
         <div className='container mx-auto'>
           <div className='flex flex-col xl:flex-row gap-x-8'>
@@ -22,7 +22,7 @@ const Services = () => {
                 initial='hidden'
                 animate='show'
                 exit='hidden'
-                className='h2 xl:mt-8'
+                className='text-[30px] font-bold md:h2 xl:mt-8'
               >
                 My Services
                 <span className='text-accent'>.</span>
@@ -32,7 +32,7 @@ const Services = () => {
                 initial='hidden'
                 animate='show'
                 exit='hidden'
-                className='mb-0 md:mb-4 max-w[400px] mx-auto lg:mx-0'
+                className='mb-0 md:mb-4 max-w[400px] mx-auto lg:mx-0 text-[14px] md:text-[16px]'
               >
                 As a Front-End Developer with expertise in HTML, CSS, Bootstrap, Tailwind CSS, JavaScript, React.js, and Next.js, I can create custom responsive and user-friendly websites.
               </motion.p>
@@ -44,7 +44,7 @@ const Services = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='w-full xl:max-w-[65%]'
+              className='pb-[100px] w-full xl:max-w-[65%]'
             >
               <ServiceSlider />
             </motion.div>

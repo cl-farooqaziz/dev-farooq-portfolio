@@ -234,7 +234,7 @@ const WorkSlider = () => {
 
   return (
     <>
-      <div className="tabs flex justify-center gap-x-8 mb-8">
+      <div className="tabs flex flex-wrap justify-center gap-4 md:gap-x-8 mb-8">
         <button
           className={`tab ${activeTab === "All" ? "active text-accent border-accent" : ""} btn border border-white/50 px-5 h-[40px] transition-all duration-300 flex items-center justify-center gap-x-2 overflow-hidden hover:border-accent hover:text-accent group`}
           onClick={() => handleTabClick("All")}
@@ -271,11 +271,11 @@ const WorkSlider = () => {
               {workData.slides.map((slide, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-8 lg:gap-4 cursor-pointer">
+                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-4 lg:gap-4 cursor-pointer">
                       {
                         slide.images.map((image, index) => {
                           return (
-                            <div className="w-[85%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
+                            <div className="w-[94%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
                               <a href={image.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative overflow-hidden group"
                                 key={index}
                               >
@@ -284,8 +284,8 @@ const WorkSlider = () => {
                                 {/* Overlay Gradirnt */}
                                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                                 {/* Title */}
-                                <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                                  <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
+                                <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-8 group-hover:md:-translate-y-20 transition-all duration-300">
+                                  <div className="flex items-center gap-x-2 text-[8px] md:text-[13px] tracking-[0.2em]">
                                     {/* Title part 1 */}
                                     <div className="delay-100">
                                       VISIT
@@ -317,11 +317,11 @@ const WorkSlider = () => {
               {workData1.slides.map((slide, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-8 lg:gap-4 cursor-pointer">
+                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-4 lg:gap-4 cursor-pointer">
                       {
                         slide.images.map((image, index) => {
                           return (
-                            <div className="w-[85%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
+                            <div className="w-[94%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
                               <a href={image.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative overflow-hidden group"
                                 key={index}
                               >
@@ -330,8 +330,8 @@ const WorkSlider = () => {
                                 {/* Overlay Gradirnt */}
                                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                                 {/* Title */}
-                                <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                                  <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
+                                <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-8 group-hover:md:-translate-y-20 transition-all duration-300">
+                                  <div className="flex items-center gap-x-2 text-[8px] md:text-[13px] tracking-[0.2em]">
                                     {/* Title part 1 */}
                                     <div className="delay-100">
                                       VISIT
@@ -363,11 +363,11 @@ const WorkSlider = () => {
               {workData2.slides.map((slide, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-8 lg:gap-4 cursor-pointer">
+                    <div className="grid grid-cols-2 grid-rows-2 gap-0 gap-y-4 lg:gap-4 cursor-pointer">
                       {
                         slide.images.map((image, index) => {
                           return (
-                            <div className="w-[85%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
+                            <div className="w-[94%] lg:w-full mx-auto relative rounded-lg overflow-hidden flex items-center justify-center group">
                               <a href={image.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative overflow-hidden group"
                                 key={index}
                               >
@@ -376,8 +376,8 @@ const WorkSlider = () => {
                                 {/* Overlay Gradirnt */}
                                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                                 {/* Title */}
-                                <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                                  <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
+                                <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-8 group-hover:md:-translate-y-20 transition-all duration-300">
+                                  <div className="flex items-center gap-x-2 text-[8px] md:text-[13px] tracking-[0.2em]">
                                     {/* Title part 1 */}
                                     <div className="delay-100">
                                       VISIT

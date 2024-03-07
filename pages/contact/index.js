@@ -1,20 +1,60 @@
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 // Components
-import TestimonialSlider from '../../components/TestimonialSlider';
-import Bulb from '../../components/Bulb'
 import Circles from '../../components/Circles'
-
 // Framer Motion
 import { motion } from "framer-motion";
 import { fadeIn } from '../../variants'
-
 // Icons
 import { BsArrowRight } from "react-icons/bs";
 
 const Contact = () => {
+  const router = useRouter();
+  const [score, setScore] = useState('Submit');
+
+  const handleSubmit = async (e) => {
+
+    e.preventDefault()
+    var currentdate = new Date().toLocaleString() + ''
+
+    const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value,
+      message: e.target.message.value,
+      currentdate: currentdate,
+    }
+
+    const JSONdata = JSON.stringify(data)
+
+    setScore('Sending Data');
+    console.log(JSONdata);
+
+    fetch('api/email/route', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSONdata
+    }).then((res) => {
+      console.log(`Response received ${res}`)
+      if (res.status === 200) {
+        console.log(`Response Successed ${res}`)
+      }
+    })
+
+    const { pathname } = router;
+    if (pathname == pathname) {
+      window.location.href = '/thank-you';
+    }
+
+  }
+
   return (
     <>
-      <div className='h-full bg-primary/30'>
-        <div className='container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full'>
+      <div className='h-full bg-primary/60 contact'>
+        <div className='container mx-auto text-center xl:text-left flex items-center justify-center h-full overflow-x-hidden'>
           {/* Text & Form */}
           <div className='flex flex-col w-full max-w-[700px]'>
             {/* Text */}
@@ -23,27 +63,28 @@ const Contact = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='h2 text-center mb-12'
+              className='text-[30px] font-bold md:h2 text-center mb-4 md:mb-12'
             >
               Let's
               <span className='text-accent'> Connect.</span>
             </motion.h2>
             {/* Form */}
             <motion.form
+              onSubmit={handleSubmit}
               variants={fadeIn('up', 0.4)}
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='flex flex-1 flex-col gap-6 w-full mx-auto'>
+              className='flex flex-1 flex-col gap-4 md:gap-6 w-full mx-auto'>
               {/* Input Group */}
-              <div className='flex gap-x-6 w-full'>
-                <input type='text' placeholder='Name' required className='input' />
-                <input type='email' placeholder='Email' required className='input' />
+              <div className='flex flex-col md:flex-row gap-y-4 md:gap-x-6 w-full'>
+                <input type='text' name='name' placeholder='Name' required className='input' />
+                <input type='email' name='email' placeholder='Email' required className='input' />
               </div>
-              <input type='tel' placeholder='Number' required className='input' />
-              <textarea placeholder='Message' required className='textarea'></textarea>
+              <input type='tel' name='phone' placeholder='Number' maxLength={15} minLength={7} required className='input' />
+              <textarea name='message' placeholder='Message' required className='textarea'></textarea>
               <button className='btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group'>
-                <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500'>Submit</span>
+                <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500'>{score}</span>
                 <BsArrowRight className='translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]' />
               </button>
             </motion.form>

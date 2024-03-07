@@ -10,7 +10,7 @@ import { fadeIn } from '../../variants'
 const Testimonials = () => {
   return (
     <>
-      <div className='h-full bg-primary/30 py-32 text-center'>
+      <div className='h-full bg-primary/60 text-center overflow-x-hidden'>
         <div className='container mx-auto h-full flex flex-col justify-center'>
           {/* Title */}
           <motion.h2
@@ -18,7 +18,7 @@ const Testimonials = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='h2 mb-8 xl:mb-0'
+            className='text-[30px] md:text-[45px] font-bold lg:h2 mb-0 md:mb-8 xl:mb-0'
           >
             What Clients
             <span className='text-accent'> Say.</span>
