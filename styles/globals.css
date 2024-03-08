@@ -65,7 +65,7 @@
 
 @media screen and (max-width: 767px) {
   .workslider .swiper-pagination-bullets {
-    bottom: 30px !important;
+    bottom: 40px !important;
   }
 
   .servcSlider .swiper-pagination-bullets {
