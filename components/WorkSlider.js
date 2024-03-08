@@ -390,7 +390,7 @@ const WorkSlider = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 992);
+      setIsMobile(window.innerWidth < 768);
     };
     // Initial check
     handleResize();

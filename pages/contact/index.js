@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Axios from "axios";
 import { useRouter } from 'next/router';
 // Components
 import Circles from '../../components/Circles'
@@ -9,8 +10,26 @@ import { fadeIn } from '../../variants'
 import { BsArrowRight } from "react-icons/bs";
 
 const Contact = () => {
-  const router = useRouter();
+  const [ip, setIP] = useState('');
+  //creating function to load ip address from the API
+  const getIPData = async () => {
+    const res = await Axios.get('https://geolocation-db.com/json/f2e84010-e1e9-11ed-b2f8-6b70106be3c8');
+    setIP(res.data);
+  }
+  useEffect(() => {
+    getIPData()
+  }, [])
+
   const [score, setScore] = useState('Submit');
+
+  const router = useRouter();
+  const currentRoute = router.pathname;
+  const [pagenewurl, setPagenewurl] = useState('');
+  useEffect(() => {
+    const pagenewurl = window.location.href;
+    console.log(pagenewurl);
+    setPagenewurl(pagenewurl);
+  }, []);
 
   const handleSubmit = async (e) => {
 
@@ -22,6 +41,8 @@ const Contact = () => {
       email: e.target.email.value,
       phone: e.target.phone.value,
       message: e.target.message.value,
+      pageUrl: pagenewurl,
+      IP: `${ip.IPv4} - ${ip.country_name} - ${ip.city}`,
       currentdate: currentdate,
     }
 
@@ -29,6 +50,7 @@ const Contact = () => {
 
     setScore('Sending Data');
     console.log(JSONdata);
+
 
     fetch('api/email/route', {
       method: 'POST',
@@ -44,11 +66,32 @@ const Contact = () => {
       }
     })
 
+    let headersList = {
+      "Accept": "*/*",
+      "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+      "Authorization": "Bearer ke2br2ubssi4l8mxswjjxohtd37nzexy042l2eer",
+      "Content-Type": "application/json"
+    }
+
+    let bodyContent = JSON.stringify({
+      "IP": `${ip.IPv4} - ${ip.country_name} - ${ip.city}`,
+      "Brand": "PortFolio",
+      "Page": `${currentRoute}`,
+      "Date": currentdate,
+      "Time": currentdate,
+      "JSON": JSONdata,
+
+    });
+
+    await fetch("https://sheetdb.io/api/v1/yscn00ileemoq", {
+      method: "POST",
+      body: bodyContent,
+      headers: headersList
+    });
     const { pathname } = router;
     if (pathname == pathname) {
       window.location.href = '/thank-you';
     }
-
   }
 
   return (

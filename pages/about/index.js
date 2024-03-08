@@ -200,7 +200,7 @@ const About = () => {
                 )
               })}
             </div>
-            <div className='w-full md:w-[60%] mx-auto lg:w-full pb-[135px] xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-start mt-2 xl:mt-0'>
+            <div className='w-full md:w-[60%] mx-auto lg:w-full pb-[135px] md:pb-[100px] lg:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-start mt-2 xl:mt-0'>
               {aboutData[index].info.map((item, itemIndex) => {
                 return (
                   <div

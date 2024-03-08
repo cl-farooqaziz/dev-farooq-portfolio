@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 
-export async function POST(request) {
+export default async function POST(req, res) {
     try {
-        const { name, email, phone, message } = await request.json();
+        const { name, email, phone, message } = await req.body;
         const transporter = nodemailer.createTransport({
-            service: "Gmail",
+            service: "gmail",
             host: "smtp.gmail.com",
             port: 465,
             secure: true,
